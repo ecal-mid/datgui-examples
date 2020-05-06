@@ -24,10 +24,11 @@ function setup() {
 	angleMode(DEGREES);
 	noStroke();
 
+	//GUI.add(parameters_object, parameter_name, parameter_default_value)
 	GUI.add(MY_RECT, 'width', MY_RECT.width).min(0);
 	GUI.add(MY_RECT, 'height', MY_RECT.height).min(0);
 	ROTATE_CONTROL = GUI.add(MY_RECT, 'rotationSpeed', MY_RECT.rotationSpeed).min(-5).max(5).step(1);
-  	GUI.add(MY_RECT, 'offsetX', MY_RECT.offsetX).min(); //min value is undefined -> offsetX goes in negative
+  	GUI.add(MY_RECT, 'offsetX', MY_RECT.offsetX).min(); //minimum value is undefined -> value goes in negative
   	GUI.add(MY_RECT, 'offsetY', MY_RECT.offsetY).min();
   	GUI.add(MY_RECT, 'resetRotation');
   	GUI.addColor(MY_RECT, 'color');
